@@ -17,174 +17,138 @@
             @csrf
             <div class="row mb-4">
                 <div class="col">
-                    <div class="form-outline">
-                        <label class="form-label" for="clave" required>CLAVE</label>
-                        <input type="text" name="clave" id="clave" class="form-control" value="<?php echo mt_rand(1000000000,9999999999)?>" maxlength="10" required/>
-                        <div class="alert alert3 alert-success" role="alert">
-                          La clave del propietario asignado.
-                        </div>
-                      </div>
+                    <label class="form-label" for="clave" required>CLAVE</label>
+                    <input type="text" name="clave" id="clave" class="form-control" value="<?php echo mt_rand(1000000000,9999999999)?>" maxlength="10" required/>
+                    <div class="alert alert3 alert-success" role="alert">
+                        La clave del propietario asignado.
+                    </div>
                 </div>
                 <div class="col">
-                    <div class="form-outline">
-                        <label class="form-label" for="form6Example2" required>SECCIÓN</label>
-                        <input type="text" name="seccion" id="form6Example2" class="form-control" required/>
-                    </div>
+                    <label class="form-label" for="form6Example2" required>SECCIÓN</label>
+                    <input type="text" name="seccion" id="form6Example2" class="form-control" required/>
                 </div>
             </div>
             <div class="row mb-4">
                 <div class="col">
-                    <div class="form-outline">
-                      <label class="form-label" for="form6Example3" required>NOMBRE</label>
-                      <input type="text" name="nombre" id="form6Example3" class="form-control" required/>
-                    </div>
+                    <label class="form-label" for="form6Example3" required>NOMBRE</label>
+                    <input type="text" name="nombre" id="form6Example3" class="form-control" required/>
                 </div>
             </div>
             <div class="row mb-4">
                 <div class="col">
-                    <div class="form-outline">
-                      <label class="form-label" for="form6Example4" required>APELLIDO PATERNO</label>
-                      <input type="text" name="a_paterno" id="form6Example4" class="form-control" required/>
-                    </div>
+                    <label class="form-label" for="form6Example4" required>APELLIDO PATERNO</label>
+                    <input type="text" name="a_paterno" id="form6Example4" class="form-control" required/>>
                 </div>
                 <div class="col">
-                  <div class="form-outline">
                     <label class="form-label" for="form6Example5" required>APELLIDO MATERNO</label>
                     <input type="text" name="a_materno" id="form6Example5" class="form-control" required/>
-                  </div>
-              </div>
-            </div>
-    
-            <div class="row mb-4">
-              <div class="col">
-                    <div class="form-outline">
-                      <label class="form-label" for="form6Example6" required>DIRECCIÓN</label>
-                      <input type="text" name="direccion" id="form6Example6" class="form-control" required/>
-                    </div>
-              </div>
-              <div class="col">
-                  <div class="form-outline">
-                    <label class="form-label" for="form6Example5" required>COLONIA</label>
-                    <input type="text" name="colonia" id="form6Example5" class="form-control" required/>
-                  </div>
               </div>
             </div>
     
             <div class="row mb-4">
                 <div class="col">
-                    <div class="form-outline">
-                        <label class="form-label" for="form6Example5" required>CÓDIGO POSTAL</label>
-                        <input type="number" name="Cod_postal" id="form6Example5" class="form-control" maxlength="5" required/>
-                    </div>
+                        <label class="form-label" for="form6Example6" required>DIRECCIÓN</label>
+                        <input type="text" name="direccion" id="form6Example6" class="form-control" required/>
+                </div>
+                <div class="col">
+                        <label class="form-label" for="form6Example5" required>COLONIA</label>
+                        <input type="text" name="colonia" id="form6Example5" class="form-control" required/>
+                </div>
+            </div>
+    
+            <div class="row mb-4">
+                <div class="col">
+                    <label class="form-label" for="form6Example5" required>CÓDIGO POSTAL</label>
+                    <input type="number" name="Cod_postal" id="form6Example5" class="form-control" maxlength="5" required/>
                 </div>
             </div>
         
             <div class="row mb-4">
                 <div class="col">
-                    <div class="form-outline">
                     <label class="form-label" for="form6Example5" required>CURP</label>
                     <input type="text" name="curp" id="form6Example5" class="form-control" maxlength="18" required/>
-                    </div>
                 </div>
                 <div class="col">
-                    <div class="form-outline mb-4">
                     <label class="form-label" for="form6Example5" required>CLAVE ELECTOR</label>
                     <input type="text" name="Clave_elector" id="form6Example5" class="form-control" maxlength="18" required/>
-                    </div>
                 </div>
             </div>
         
             <div class="row mb-4">
                 <div class="col">
-                <div class="form-outline">
                     <label class="form-label" for="f_nacimiento" required>FECHA DE NACIMIENTO</label>
                     <input type="date" name="f_nacimiento" id="f_nacimiento" class="form-control" onblur="insertarFecha();" required/>
                 </div>
-                </div>
-            </div>
-        
-            <div class="row mb-4">
-            <div class="col">
-                <div class="form-outline">
-                <label class="form-label" for="form6Example5">TIPO</label>
-                <select class="form-select" name="tipo" aria-label="Default select example" required>
-                    <option selected>Selecciona el tipo</option>
-                    @foreach ($tipos as $item)
-                    <option value="{{$item->nombre}}">{{$item->nombre}}</option>
-                    @endforeach
-                </select>
-                </div>
-            </div>
             </div>
         
             <div class="row mb-4">
                 <div class="col">
-                <div class="form-outline">
+                    <label class="form-label" for="form6Example5">TIPO</label>
+                    <select class="form-select" name="tipo" aria-label="Default select example" required>
+                        <option selected>Selecciona el tipo</option>
+                        @foreach ($tipos as $item)
+                        <option value="{{$item->nombre}}">{{$item->nombre}}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+        
+            <div class="row mb-4">
+                <div class="col">
                     <label class="form-label" for="form6Example5">CORREO ELECTRONICO</label>
                     <input type="email" name="correo" id="form6Example5" class="form-control"/>
                 </div>
-                </div>
             </div>
         
             <div class="row mb-4">
                 <div class="col">
-                <div class="form-outline  mb-4">
                     <label class="form-label" for="form6Example5">FACEBOOK</label>
                     <input type="text" name="facebook" id="form6Example5" class="form-control"/>
                 </div>
-                </div>
-            </div>
-        
-            <div class="row mb-4">
-            <div class="col">
-                <div class="form-outline mb-4">
-                <label class="form-label" for="form6Example5">TELEFONO DE CASA</label>
-                <input type="number" name="telefono" id="form6Example5" class="form-control"  maxlength="10"/>
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-outline mb-4">
-                <label class="form-label" for="form6Example5">CELULAR</label>
-                <input type="number" name="celular" id="form6Example5" class="form-control"  maxlength="10"/>
-                </div>
-            </div>
             </div>
         
             <div class="row mb-4">
                 <div class="col">
-                <label class="form-label" for="sexo">SEXO</label>
-                <div class="form-outline" data-toggle="buttons">
-                    <label class="btn btn-primary">
-                        <input type="radio" name="sexo" id="sexo" value="HOMBRE"> HOMBRE
-                    </label>
-                    <label class="btn btn-danger">
-                        <input type="radio" name="sexo" id="sexo" value="MUJER"> MUJER
-                    </label>
-                </div>
+                    <label class="form-label" for="form6Example5">TELEFONO DE CASA</label>
+                    <input type="number" name="telefono" id="form6Example5" class="form-control"  maxlength="10"/>
                 </div>
                 <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="form6Example5">GÉNERO</label>
+                    <label class="form-label" for="form6Example5">CELULAR</label>
+                    <input type="number" name="celular" id="form6Example5" class="form-control"  maxlength="10"/>
+                </div>
+            </div>
+        
+            <div class="row mb-4">
+                <div class="col">
+                    <label class="form-label" for="sexo">SEXO</label>
+                    <div class="form-outline" data-toggle="buttons">
+                        <label class="btn btn-primary">
+                            <input type="radio" name="sexo" id="sexo" value="HOMBRE"> HOMBRE
+                        </label>
+                        <label class="btn btn-danger">
+                            <input type="radio" name="sexo" id="sexo" value="MUJER"> MUJER
+                        </label>
+                    </div>
+                </div>
+                <div class="col">
+                    <label class="form-label" for="form6Example5">SELECCIONA GÉNERO</label>
                     <select class="form-select" name="genero" aria-label="Default select example">
-                        <option selected>Selecciona el género</option>
+                        <option></option>
                         <option value="MASCULINO">MASCULINO</option>
                         <option value="FEMENINO">FEMENINO</option>
                     </select>
                 </div>
-                </div>
             </div>
         
             <div class="row mb-4">
                 <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="form6Example5">ESTATUS</label>
+                    <label class="form-label" for="form6Example5">SELECCIONA EL ESTATUS</label>
                     <select class="form-select" aria-label="Default select example" name="estatus">
-                        <option selected>Selecciona el estatus</option>
+                        <option></option>
                         @foreach ($estatus as $item)
                             <option value="{{$item->nombre}}">{{$item->nombre}}</option>
                         @endforeach
                     </select>
-                </div>
                 </div>
                 <div class="col">
                     <label class="form-check-label">ESTRUCTURA</label>

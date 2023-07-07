@@ -25,13 +25,13 @@ return new class extends Migration
             $table->string('clave_elector',18);
             $table->date('f_nacimiento');
             $table->string('tipo');
-            $table->string('correo');
-            $table->string('facebook');
-            $table->string('telefono');
-            $table->string('celular');
+            $table->string('correo')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('telefono')->nullable();
+            $table->string('celular')->nullable();
             $table->string('sexo');
             $table->string('estructuras');
-            $table->string('genero');
+            $table->string('genero')->nullable();
             $table->string('estatus');
             $table->timestamps();
         });

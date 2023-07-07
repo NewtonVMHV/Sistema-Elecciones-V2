@@ -18,97 +18,74 @@
         @method('put')
         <div class="row mb-4">
             <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="clave" required>CLAVE</label>
-                    <input type="text" name="clave" id="clave" class="form-control" value="{{$estructura_cambio->clave}}"/>
-                    <div class="alert alert3 alert-success" role="alert">
-                      La clave del propietario asignado.
-                    </div>
-                  </div>
+                <label class="form-label" for="clave" required>CLAVE</label>
+                <input type="text" name="clave" id="clave" class="form-control" value="{{$estructura_cambio->clave}}"/>
+                <div class="alert alert3 alert-success" role="alert">
+                  La clave del propietario asignado.
+                </div>
             </div>
             <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="form6Example2">SECCIÓN</label>
-                    <input type="text" name="seccion" id="form6Example2" class="form-control" value="{{$estructura_cambio->seccion}}" required/>
-                </div>
+                <label class="form-label" for="form6Example2">SECCIÓN</label>
+                <input type="text" name="seccion" id="form6Example2" class="form-control" value="{{$estructura_cambio->seccion}}" required/>
             </div>
         </div>
 
         <div class="row mb-4">
             <div class="col">
-                <div class="form-outline mb-4">
-                    <label class="form-label" for="form6Example3">NOMBRE</label>
-                    <input type="text" name="nombre" id="form6Example3" class="form-control" value="{{$estructura_cambio->nombre}}" required/>
-                </div>
+              <label class="form-label" for="form6Example3">NOMBRE</label>
+              <input type="text" name="nombre" id="form6Example3" class="form-control" value="{{$estructura_cambio->nombre}}" required/>
             </div>
         </div>
 
         <div class="row mb-4">
           <div class="col">
-            <div class="form-outline">
               <label class="form-label" for="form6Example4">APELLIDO PATERNO</label>
               <input type="text" name="a_paterno" id="form6Example4" class="form-control" value="{{$estructura_cambio->a_paterno}}" required/>
-           </div>
           </div>
           <div class="col">
-            <div class="form-outline">
-                <label class="form-label" for="form6Example4" required>APELLIDO MATERNO</label>
-                <input type="text" name="a_materno" id="form6Example4" class="form-control" value="{{$estructura_cambio->a_materno}}" required/>
-            </div>
+              <label class="form-label" for="form6Example4" required>APELLIDO MATERNO</label>
+              <input type="text" name="a_materno" id="form6Example4" class="form-control" value="{{$estructura_cambio->a_materno}}" required/>
           </div>
         </div>
 
         <div class="row mb-4">
           <div class="col">
-            <div class="form-outline">
               <label class="form-label" for="form6Example6">DIRECCIÓN</label>
               <input type="text" name="direccion" id="form6Example6" class="form-control" value="{{$estructura_cambio->direccion}}" required/>
-            </div>
           </div>  
           <div class="col">
-            <div class="form-outline mb-4">
               <label class="form-label" for="form6Example5">COLONIA</label>
               <input type="text" name="colonia" id="form6Example5" class="form-control" value="{{$estructura_cambio->colonia}}" required/>
-            </div>
           </div>
         </div>
 
         <div class="row mb-4">
           <div class="col">
-            <div class="form-outline">
               <label class="form-label" for="form6Example5">CÓDIGO POSTAL</label>
               <input type="number" name="Cod_postal" id="form6Example5" class="form-control" value="{{$estructura_cambio->codigo_postal}}" required/>
-            </div>
           </div>
         </div>
 
         <div class="row mb-4">
           <div class="col">
-            <div class="form-outline mb-4">
               <label class="form-label" for="form6Example5">CURP</label>
               <input type="text" name="curp" id="form6Example5" class="form-control" value="{{$estructura_cambio->curp}}" required/>
-            </div>
           </div>
           <div class="col">
-            <div class="form-outline mb-4">
               <label class="form-label" for="form6Example5">CLAVE ELECTOR</label>
               <input type="text" name="Clave_elector" id="form6Example5" class="form-control" value="{{$estructura_cambio->clave_elector}}" required/>
-            </div>
           </div>
         </div>
 
         <div class="row mb-4">
           <div class="col">
-            <div class="form-outline">
               <label class="form-label" for="f_nacimiento">FECHA DE NACIMIENTO</label>
               <input type="date" name="f_nacimiento" id="f_nacimiento" class="form-control" onblur="insertarFecha();" value="{{$estructura_cambio->f_nacimiento}}" required/>
-            </div>
           </div>
         </div>
 
         <div class="row mb-4">
           <div class="col">
-            <div class="form-outline">
               <label class="form-label" for="form6Example5">TIPO</label>
               <select class="form-select" name="tipo" aria-label="Default select example" required>
                   <option selected>{{ $estructura_cambio->tipo }}</option>
@@ -116,40 +93,31 @@
                     <option value="{{$item->nombre}}">{{$item->nombre}}</option>
                   @endforeach
               </select>
-            </div>
           </div>
         </div>
 
         <div class="row mb-4">
           <div class="col">
-            <div class="form-outline">
               <label class="form-label" for="form6Example5">CORREO ELECTRONICO</label>
               <input type="email" name="correo" id="form6Example5" class="form-control" value="{{$estructura_cambio->correo}}"/>
-            </div>
           </div>
         </div>
 
         <div class="row mb-4">
           <div class="col">
-            <div class="form-outline">
               <label class="form-label" for="form6Example5">FACEBOOK</label>
               <input type="text" name="facebook" id="form6Example5" class="form-control" value="{{$estructura_cambio->facebook}}"/>
-            </div>
           </div>
         </div>
 
         <div class="row mb-4">
           <div class="col">
-            <div class="form-outline">
               <label class="form-label" for="form6Example5">TELEFONO DE CASA</label>
               <input type="number" name="telefono" id="form6Example5" class="form-control" value="{{$estructura_cambio->telefono}}"/>
-            </div>
           </div>
           <div class="col">
-            <div class="form-outline">
               <label class="form-label" for="form6Example5">CELULAR</label>
               <input type="number" name="celular" id="form6Example5" class="form-control" value="{{$estructura_cambio->celular}}"/>
-            </div>
           </div>
         </div>
 
@@ -166,22 +134,17 @@
             </div>
           </div>
           <div class="col">
-            <div class="form-outline">
-              <div class="form-outline mb-4">
                 <label class="form-label" for="form6Example5">GÉNERO</label>
                 <select class="form-select" name="genero" aria-label="Default select example" required>
                     <option selected>{{ $estructura_cambio->genero }}</option>
                     <option value="MASCULINO">MASCULINO</option>
                     <option value="FEMENINO">FEMENINO</option>
                 </select>
-              </div>
-            </div>
           </div>
         </div>
 
         <div class="row mb-4">
           <div class="col">
-            <div class="form-outline mb-4">
               <label class="form-label" for="form6Example5">ESTATUS</label>
               <select class="form-select" aria-label="Default select example" name="estatus">
                 <option selected>{{ $estructura_cambio->estatus }}</option>
@@ -189,7 +152,6 @@
                     <option value="{{$item->nombre}}">{{$item->nombre}}</option>
                 @endforeach
               </select>
-            </div>
           </div>
           <div class="col">
             <label class="form-check-label">ESTRUCTURA</label>

@@ -114,7 +114,7 @@
         <div class="row mb-4">
             <div class="col">
                 <div class="form-outline">
-                    <label class="form-label" for="form6Example11" required>ESTATUS</label>
+                    <label class="form-label" for="form6Example11" required>SELECCIONA EL ESTATUS</label>
                     <select class="form-select" name="estatus" aria-label="Default select example">
                         <option selected>{{ $gestiones->estatus }}</option>
                         <option value="Pendiente">Pendiente</option>

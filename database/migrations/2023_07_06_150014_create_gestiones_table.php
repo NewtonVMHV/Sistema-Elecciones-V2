@@ -21,9 +21,9 @@ return new class extends Migration
             $table->string('NumeroGestion',10);
             $table->text('solicitud');
             $table->date('fechasol');
-            $table->string('respuesta');
-            $table->date('fecharespuesta');
-            $table->string('observaciones');
+            $table->string('respuesta')->nullable();
+            $table->date('fecharespuesta')->nullable();
+            $table->string('observaciones')->nullable();
             $table->string('estatus',15);
             $table->timestamps();
         });

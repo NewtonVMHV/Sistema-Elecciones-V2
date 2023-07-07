@@ -34,96 +34,74 @@
         @method('POST')
         <div class="row mb-3">
             <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="clave" required>CLAVE</label>
-                    <input type="text" name="clave" id="clave" class="form-control" onblur="buscar_datos();" required/>
-                    <ul>
-                        <li type="disc">Escribir la clave de la estructura para encontrar lo en nuestra base de datos.</li>   
-                    </ul>
-                </div>
+                <label class="form-label" for="clave" required>CLAVE</label>
+                <input type="text" name="clave" id="clave" class="form-control" onblur="buscar_datos();" required/>
+                <ul>
+                    <li type="disc">Escribir la clave de la estructura para encontrar lo en nuestra base de datos.</li>   
+                </ul>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="seccion" required>SECCION</label>
-                    <input type="text" name="seccion" id="seccion" class="form-control" required/>
-                </div>
+                <label class="form-label" for="seccion" required>SECCION</label>
+                <input type="text" name="seccion" id="seccion" class="form-control" required/>
             </div>
             <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="nombre" required>NOMBRE</label>
-                    <input type="text" name="nombre" id="nombre" class="form-control" required/>
-                </div>
+                <label class="form-label" for="nombre" required>NOMBRE</label>
+                <input type="text" name="nombre" id="nombre" class="form-control" required/>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="a_paterno" required>APELLIDO PATERNO</label>
-                    <input type="text" name="a_paterno" id="a_paterno" class="form-control" required/>
-                </div>
+                <label class="form-label" for="a_paterno" required>APELLIDO PATERNO</label>
+                <input type="text" name="a_paterno" id="a_paterno" class="form-control" required/>
             </div>
             <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="a_materno" required>APELLIDO MATERNO</label>
-                    <input type="text" name="a_materno" id="a_materno" class="form-control" required/>
-                </div>
+                <label class="form-label" for="a_materno" required>APELLIDO MATERNO</label>
+                <input type="text" name="a_materno" id="a_materno" class="form-control" required/>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="NumeroGestion" required>NÚMERO DE GESTIÓN</label>
-                    <input type="text" name="NumeroGestion" id="NumeroGestion" class="form-control" value="00{{ $contador }}" required/>
-                </div>
+                <label class="form-label" for="NumeroGestion" required>NÚMERO DE GESTIÓN</label>
+                <input type="text" name="NumeroGestion" id="NumeroGestion" class="form-control" value="00{{ $contador }}" required/>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="form6Example7" required>SOLICITUD</label>
-                    <textarea class="form-control" id="form6Example7" rows="4" name="solicitud"></textarea>
-                </div>
+                <label class="form-label" for="form6Example7" required>SOLICITUD</label>
+                <textarea class="form-control" id="form6Example7" rows="4" name="solicitud"></textarea>
             </div>
             <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="form6Example8" required>FECHA DE SOLICITUD</label>
-                    <input type="date" name="fecha_solicitud" id="form6Example8" class="form-control" required/>
-                </div>
+                <label class="form-label" for="form6Example8" required>FECHA DE SOLICITUD</label>
+                <input type="date" name="fecha_solicitud" id="form6Example8" class="form-control" required/>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="form6Example9" required>RESPUESTA</label>
-                    <textarea class="form-control" id="form6Example9" rows="4" name="respuesta"></textarea>
-                </div>
+                <label class="form-label" for="form6Example9" required>RESPUESTA</label>
+                <textarea class="form-control" id="form6Example9" rows="4" name="respuesta"></textarea>
             </div>
             <div class="col">
                 <label class="form-label" for="form6Example12" required>FECHA DE RESPUESTA</label>
-                <input type="date" name="fecha_respuesta" id="form6Example12" class="form-control" required/>
+                <input type="date" name="fecha_respuesta" id="form6Example12" class="form-control"/>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="form6Example10" required>OBSERVACIONES</label>
-                    <textarea class="form-control" id="form6Example10" rows="4" name="observaciones"></textarea>
-                </div>
+                <label class="form-label" for="form6Example10" required>OBSERVACIONES</label>
+                <textarea class="form-control" id="form6Example10" rows="4" name="observaciones"></textarea>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="form6Example11" required>ESTATUS</label>
-                    <select class="form-select" name="estatus" aria-label="Default select example">
-                        <option>Selecciona el estatus</option>
-                        <option value="Pendiente" selected>Pendiente</option>
-                        <option value="En tramite">En trámite</option>
-                        <option value="Terminado">Terminado</option>
-                      </select>
-                </div>
+                <label class="form-label" for="form6Example11" required>SELECCIONA EL ESTATUS</label>
+                <select class="form-select" name="estatus" aria-label="Default select example">
+                    <option></option>
+                    <option value="Pendiente" selected>Pendiente</option>
+                    <option value="En tramite">En trámite</option>
+                    <option value="Terminado">Terminado</option>
+                </select>
             </div>
         </div>
         <div class="d-grid gap-2">
