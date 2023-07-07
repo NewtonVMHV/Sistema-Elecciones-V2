@@ -87,3 +87,8 @@ Route::get('/Control-Estadistico/Genero',[App\Http\Controllers\ControlEstadistic
 Route::get('/Control-Estadistico/Estatus',[App\Http\Controllers\ControlEstadisticoController::class,'estatus'])->name('Control-Estadistico.estatus');
 Route::get('/Control-Estadistico/Tipo',[App\Http\Controllers\ControlEstadisticoController::class,'tipo'])->name('Control-Estadistico.tipo');
 Route::get('/Control-Estadistico/Estructura',[App\Http\Controllers\ControlEstadisticoController::class,'estructuras'])->name('Control-Estadistico.estructura');
+
+//Perfil
+Route::get('/Perfil/{user}/Editar', [App\Http\Controllers\PerfilController::class, 'edit'])->name('perfil.edit');
+Route::put('/Perfil/{user}', [App\Http\Controllers\PerfilController::class, 'update'])->name('perfil.update');
+Route::get('/Perfil', [App\Http\Controllers\PerfilController::class,'show'])->name('perfil.details');

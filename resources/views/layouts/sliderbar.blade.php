@@ -296,7 +296,7 @@
             </div>
             <ul class="sub-menu">
                 <li><a class="link_name" href="#">Ajustes</a></li>
-                <li><a href="">Ver Perfil</a></li>
+                <li><a href="{{ route('perfil.details',Auth::user()->id) }}">Ver Perfil</a></li>
                 <li><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                 Cerrar Sesión</a></li>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
