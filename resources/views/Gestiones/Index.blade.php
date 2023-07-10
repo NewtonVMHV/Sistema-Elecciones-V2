@@ -6,7 +6,10 @@
 <section class="container">
     <h2>Gestiones de Solicitudes</h2>
     <hr>
+    @can('gestiones-create')
     <a class="btn btn-outline-success justify-content-end" href="{{route('Gestiones.create')}}">Agregar solicitud <i class='bx bxs-paper-plane'></i></a>
+    @endcan
+    @can('gestiones-filter')
     <a class="btn btn-outline-success justify-content-end" href="#" data-bs-toggle="modal" data-bs-target="#filtrosFechas">Filtro de búsqueda <i class='bx bx-filter' ></i></a>
     <!-- Modal -->
     <div class="modal fade" id="filtrosFechas" tabindex="-1" aria-labelledby="filtrosFechasLabel" aria-hidden="true">
@@ -60,6 +63,7 @@
             </div>
         </div>
     </div>
+    @endcan
     <hr>
     <form class="justify-content-center d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="buscar">
@@ -92,12 +96,18 @@
             @foreach ($gestiones as $item)
             <tr>
                 <td style="width:15%;">
+                    @can('gestiones-edit')
                     <a class="btn btn-primary" href="{{ route('Gestiones.edit',$item->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i class='bx bxs-edit'></i></a>
+                    @endcan
+                    @can('gestiones-delete')
                     <a href="{{ route('Gestiones.eliminar',$item->id) }}" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
                         <i class='bx bxs-trash-alt' ></i>
                     </a>
+                    @endcan
                     <a class="btn btn-light" href="{{ route('Gestiones.details',$item->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Mostrar Detalles"><i class='bx bx-low-vision' ></i></a>
+                    @can('gestiones-export')
                     <a class="btn btn-warning" href="{{ route('Gestiones.export', $item->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Exportar"><i class='bx bx-export' ></i></a>
+                    @endcan
                 </td>
                 <td>{{$item->id}}</td>
                 <td>{{$item->NumeroGestion}}</td>

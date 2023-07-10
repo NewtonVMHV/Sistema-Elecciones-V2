@@ -56,6 +56,17 @@ class PerfilController extends Controller
     public function update(Request $request, User $user)
     {
         //
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'cargo' => $request->cargo,
+            'telefono' => $request->telefono,
+            'fecha_nacimiento' => $request->fecha_nacimiento,
+            'genero' => $request->genero
+        ]);
+
+        return redirect()->route('perfil.details')
+                        ->with('success','Perfil actualizado exitosamente');
     }
 
     /**

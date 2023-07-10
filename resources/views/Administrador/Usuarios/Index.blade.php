@@ -6,7 +6,9 @@
 <section class="container">
     <h2>Control de usuarios</h2>
     <hr>
-        <a type="button" class="btn btn-light" href="{{ route('users.create') }}"> Crear Nuevo Usuario <i class='bx bxs-user-plus'></i></a>
+    @can('user-create')
+        <a class="btn btn-light" href="{{ route('users.create') }}"> Crear Nuevo Usuario <i class='bx bxs-user-plus'></i></a>
+    @endcan
     <hr>
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
@@ -28,10 +30,14 @@
             <tr>
                 <td style="width:13%;">
                     <a class="btn btn-info" href="{{ route('users.show',$item->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Mostrar Detalles"><i class='bx bx-low-vision'></i></a>
-                    <a class="btn btn-primary" href="{{ route('users.edit',$item->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i class='bx bxs-edit'></i></a>
-                    <a class="btn btn-danger" href="{{ route('users.eliminar',$item->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
-                        <i class='bx bxs-trash-alt' ></i>
-                    </a>
+                    @can('user-edit')
+                        <a class="btn btn-primary" href="{{ route('users.edit',$item->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i class='bx bxs-edit'></i></a>
+                    @endcan
+                    @can('user-delete')
+                        <a class="btn btn-danger" href="{{ route('users.eliminar',$item->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
+                            <i class='bx bxs-trash-alt' ></i>
+                        </a>
+                    @endcan
                 </td>
                 <th scope="row">{{ $item->id }}</th>
                 <td>{{$item->name}}</td>

@@ -17,6 +17,10 @@ class TiposController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('permission:tipos-list|tipos-create|tipos-edit|tipos-delete', ['only' => ['index','store']]);
+        $this->middleware('permission:tipos-create', ['only' => ['create','store']]);
+        $this->middleware('permission:tipos-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:tipos-delete', ['only' => ['eliminar','destroy']]);
     }
     
     /**

@@ -6,7 +6,9 @@
     <section class="container">
         <h2>Control de tipos</h2>
         <hr>
-            <a type="button" class="btn btn-light" href="{{ route('tipos.create') }}"> Crear Nuevo Tipo <i class='bx bxs-user-plus'></i></a>
+        @can('tipos-create')
+        <a type="button" class="btn btn-light" href="{{ route('tipos.create') }}"> Crear Nuevo Tipo <i class='bx bxs-user-plus'></i></a>
+        @endcan
         <hr>
         @if ($message = Session::get('success'))
             <div class="alert alert-success">
@@ -26,10 +28,14 @@
                 <tr>
                     <td style="width:13%;">
                         <a class="btn btn-info" href="{{ route('tipos.show',$item->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Mostrar Detalles"><i class='bx bx-low-vision'></i></a>
+                        @can('tipos.edit')
                         <a class="btn btn-primary" href="{{ route('tipos.edit',$item->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i class='bx bxs-edit'></i></a>
+                        @endcan
+                        @can('tipos-delete')
                         <a class="btn btn-danger" href="{{ route('tipos.eliminar',$item->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
                             <i class='bx bxs-trash-alt' ></i>
                         </a>
+                        @endcan
                     </td>
                     <th scope="row">{{ $item->id }}</th>
                     <td>{{$item->nombre}}</td>

@@ -13,6 +13,15 @@ class ControlEstadisticoController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('permission:estadisticas-list|estadisticas-meses|estadisticas-seccion|estadisticas-colonia|estadisticas-sexo|estadisticas-genero|estadisticas-estatus|estadisticas-tipo|estadisticas-estructuras', ['only' => ['index']]);
+        $this->middleware('permission:estadisticas-meses', ['only' => ['meses']]);
+        $this->middleware('permission:estadisticas-seccion', ['only' => ['seccion']]);
+        $this->middleware('permission:estadisticas-colonia', ['only' => ['colonia']]);
+        $this->middleware('permission:estadisticas-sexo', ['only' => ['sexo']]);
+        $this->middleware('permission:estadisticas-genero', ['only' => ['genero']]);
+        $this->middleware('permission:estadisticas-estatus', ['only' => ['estatus']]);
+        $this->middleware('permission:estadisticas-tipo', ['only' => ['tipo']]);
+        $this->middleware('permission:estadisticas-estructuras', ['only' => ['estructuras']]);
     }
 
     /**

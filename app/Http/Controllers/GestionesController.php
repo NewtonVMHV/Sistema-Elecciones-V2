@@ -18,6 +18,12 @@ class GestionesController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('permission:gestiones-list|gestiones-export|gestiones-create|gestiones-filter|gestiones-edit|gestiones-delete', ['only' => ['index','store']]);
+        $this->middleware('permission:gestiones-create', ['only' => ['create','store']]);
+        $this->middleware('permission:gestiones-filter', ['only' => ['filter']]);
+        $this->middleware('permission:gestiones-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:gestiones-export', ['only' => ['export']]);
+        $this->middleware('permission:gestiones-delete', ['only' => ['eliminar','destroy']]);
     }
     
     /**

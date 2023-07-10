@@ -6,7 +6,10 @@
     <section class="container">
         <h2>Estructura del cambio</h2>
         <hr>
-        <a class="btn btn-outline-success justify-content-end" href="{{route('Estructura.create')}}">Agregar estructura <i class='bx bxs-user-plus' ></i></a>
+        @can('estructura-create')
+            <a class="btn btn-outline-success justify-content-end" href="{{route('Estructura.create')}}">Agregar estructura <i class='bx bxs-user-plus' ></i></a>
+        @endcan
+        @can('estructura-filter')
         <a class="btn btn-outline-success justify-content-end" href="#" data-bs-toggle="modal" data-bs-target="#filtros">Filtros de búsqueda <i class='bx bx-filter' ></i></a>
         <button type="button" class="btn btn-outline-success justify-content-end" data-bs-toggle="modal" data-bs-target="#estructuras">Filtros por estructura <i class='bx bx-filter' ></i></button>
         <div class="modal fade" id="estructuras" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -141,6 +144,7 @@
                 </div>
             </div>
         </div>
+        @endcan
         <hr>
         <form class="container justify-content-center d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="buscar">
@@ -173,10 +177,14 @@
                 @foreach ($estructura_cambio as $item)
                 <tr>
                     <td style="width:13%;">
+                        @can('estructura-edit')
                         <a class="btn btn-primary" href="{{ route('Estructura.edit',$item->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i class='bx bxs-edit'></i></a>
+                        @endcan
+                        @can('estructura-delete')
                         <a href="{{ route('Estructura.eliminar',$item->id) }}" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
                             <i class='bx bxs-trash-alt' ></i>
                         </a>
+                        @endcan
                         <a class="btn btn-light" href="{{ route('Estructura.show',$item->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Mostrar Detalles"><i class='bx bx-low-vision' ></i></a>
                     </td>
                     <th scope="row">{{$item->id}}</th>

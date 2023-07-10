@@ -18,6 +18,11 @@ class EstructuraCambioController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('permission:estructura-list|estructura-create|estructura-filter|estructura-edit|estructura-delete', ['only' => ['index','store']]);
+        $this->middleware('permission:estructura-create', ['only' => ['create','store']]);
+        $this->middleware('permission:estructura-filter', ['only' => ['filter','filterEstructura']]);
+        $this->middleware('permission:estructura-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:estructura-delete', ['only' => ['eliminar','destroy']]);
     }
     
     /**
