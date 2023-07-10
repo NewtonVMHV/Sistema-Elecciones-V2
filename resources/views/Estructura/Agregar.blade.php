@@ -83,9 +83,9 @@
         
             <div class="row mb-4">
                 <div class="col">
-                    <label class="form-label" for="form6Example5">TIPO</label>
+                    <label class="form-label" for="form6Example5">SELECCIONA EL TIPO</label>
                     <select class="form-select" name="tipo" aria-label="Default select example" required>
-                        <option selected>Selecciona el tipo</option>
+                        <option></option>
                         @foreach ($tipos as $item)
                         <option value="{{$item->nombre}}">{{$item->nombre}}</option>
                         @endforeach

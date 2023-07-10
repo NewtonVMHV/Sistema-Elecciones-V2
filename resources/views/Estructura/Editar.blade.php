@@ -86,7 +86,7 @@
 
         <div class="row mb-4">
           <div class="col">
-              <label class="form-label" for="form6Example5">TIPO</label>
+              <label class="form-label" for="form6Example5">SELECCIONA EL TIPO</label>
               <select class="form-select" name="tipo" aria-label="Default select example" required>
                   <option selected>{{ $estructura_cambio->tipo }}</option>
                   @foreach ($tipos as $item)

@@ -28,7 +28,7 @@
                 <tr>
                     <td style="width:13%;">
                         <a class="btn btn-info" href="{{ route('tipos.show',$item->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Mostrar Detalles"><i class='bx bx-low-vision'></i></a>
-                        @can('tipos.edit')
+                        @can('tipos-edit')
                         <a class="btn btn-primary" href="{{ route('tipos.edit',$item->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i class='bx bxs-edit'></i></a>
                         @endcan
                         @can('tipos-delete')
