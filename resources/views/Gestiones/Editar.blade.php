@@ -29,12 +29,14 @@ crossorigin=""/>
                     <input type="text" name="NumeroGestion" id="form6Example12" class="form-control" value="{{$gestiones->NumeroGestion}}" required/>
                 </div>
             </div>
+        </div>
+        <div class="row mb-4">
             <div class="col">
                 <div class="form-outline">
                     <label class="form-label" for="clave" required>CLAVE</label>
                     <input type="text" name="clave" id="clave" class="form-control" value="{{ $gestiones->clave }}" required/>
                     <ul>
-                        <li type="disc">Escribir la clave de la estructura para encontrarlo en nuestros datos.</li>   
+                        <li type="disc">Escribir la clave de la estructura para encontrarlo en nuestra base de datos.</li>   
                     </ul>
                 </div>
             </div>
