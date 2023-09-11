@@ -24,6 +24,9 @@ return new class extends Migration
             $table->string('respuesta')->nullable();
             $table->date('fecharespuesta')->nullable();
             $table->string('observaciones')->nullable();
+            $table->string('address');
+            $table->string('latitude', 15);
+            $table->string('longitude', 15);
             $table->string('estatus',15);
             $table->timestamps();
         });

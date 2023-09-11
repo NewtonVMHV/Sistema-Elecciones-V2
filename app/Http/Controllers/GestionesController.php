@@ -67,6 +67,9 @@ class GestionesController extends Controller
             'NumeroGestion'=>'required',
             'solicitud'=>'required',
             'fecha_solicitud'=>'required',
+            'address'=>'required',
+            'latitude'=>'required',
+            'longitude'=>'required',
             'estatus'=>'required'
         ]);
 
@@ -79,6 +82,9 @@ class GestionesController extends Controller
             'NumeroGestion'=>$request->NumeroGestion,
             'solicitud'=>$request->solicitud,
             'fechasol'=>$request->fecha_solicitud,
+            'address'=>$request->address,
+            'latitude'=>$request->latitude,
+            'longitude'=>$request->longitude,
             'respuesta'=>$request->respuesta,
             'fecharespuesta'=>$request->fecha_respuesta,
             'observaciones'=>$request->observaciones,
@@ -121,6 +127,9 @@ class GestionesController extends Controller
             'NumeroGestion'=>'required',
             'solicitud'=>'required',
             'fecha_solicitud'=>'required',
+            'address'=>'required',
+            'latitude'=>'required',
+            'longitude'=>'required',
             'estatus'=>'required'
         ]);
 
@@ -134,6 +143,9 @@ class GestionesController extends Controller
             'solicitud'=>$request->solicitud,
             'fechasol'=>$request->fecha_solicitud,
             'respuesta'=>$request->respuesta,
+            'address'=>$request->address,
+            'latitude'=>$request->latitude,
+            'longitude'=>$request->longitude,
             'fecharespuesta'=>$request->fecha_respuesta,
             'observaciones'=>$request->observaciones,
             'estatus'=>$request->estatus

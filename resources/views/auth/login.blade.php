@@ -27,9 +27,6 @@
 								<div class="mb-3">
 									<div class="mb-2 w-100">
 										<label class="text-muted" for="password">Contraseña</label>
-										<a href="{{ route('password.request') }}" class="float-end">
-											¿Olvidaste su contraseña?
-										</a>
 									</div>
 									<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
 								    @error('password')
@@ -40,10 +37,6 @@
 								</div>
 
 								<div class="d-flex align-items-center">
-									<div class="form-check">
-										<input type="checkbox" name="remember" id="remember" class="form-check-input" {{ old('remember') ? 'checked' : '' }}>
-										<label for="remember" class="form-check-label">Recuerdame</label>
-									</div>
 									<button type="submit" class="btn btn-primary ms-auto">
 										Ingresar
 									</button>

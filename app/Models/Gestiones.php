@@ -21,6 +21,9 @@ class Gestiones extends Model
         'respuesta',
         'fecharespuesta',
         'observaciones',
+        'address',
+        'latitude',
+        'longitude',
         'estatus'
     ];
 }
